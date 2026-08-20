@@ -1,18 +1,18 @@
-# etalenter-template-images
-AI-generated imagery for eTalenter event category templates - categories, age groups and competition items. Served via GitHub Pages as a CDN.
+# eTalenter template images
 
-## flags/
+AI-generated imagery for the eTalenter event category templates, served over GitHub Pages.
 
-Country flags for the Easy Start template cards, named by the ISO code stored in
-`CountryCode` on each row of `event_category_templates.json` — `in.svg`, `mx.svg`,
-and the two UK subdivisions `gb-wls.svg` and `gb-sct.svg`. 4:3 aspect, SVG.
+| Folder | Count | What it is |
+|---|---|---|
+| `categories/` | 12 | One landscape image per template category |
+| `groups/` | 10 | One per age band, shared across all templates |
+| `items/` | 509 | One per competition item, shared where items mean the same thing |
 
-Sourced unmodified from [flag-icons](https://github.com/lipis/flag-icons) by Panayiotis
-Lipiridis, MIT licensed:
+All images are 1200px-wide WebP, generated at 1536x1024.
 
-> Permission is hereby granted, free of charge, to any person obtaining a copy of this
-> software and associated documentation files (the "Software"), to deal in the Software
-> without restriction … The above copyright notice and this permission notice shall be
-> included in all copies or substantial portions of the Software.
+Item images are keyed by *meaning*, not by title: the six language variants of Prasangam all
+resolve to `items/elocution.webp`, because they are one photograph of someone giving a speech.
+Age groups collapse the 189 distinct group names down to ten real bands.
 
-To add a flag, drop the matching `4x3` SVG from that project in here under its ISO code.
+Referenced from `etaletnerStaticDb` as the `ImageUrl` on each category, age group, competition
+item and competition row.
